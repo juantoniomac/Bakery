@@ -1,0 +1,25 @@
+<section class="regular slider">
+  <div>
+    <%= image_tag 'b1.jpeg', class: 'img-responsive' %>
+  </div>
+  <div>
+    <%= image_tag 'b2.jpeg', class: 'img-responsive' %>
+  </div>
+  <div>
+    <%= image_tag 'b3.jpeg', class: 'img-responsive' %>
+  </div>
+</section>
+
+<% @body_id = 'home-page' %>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render partial: 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+<div class="text-center common-heading">Productos del día</div>
+<div class="text-center common-subheading">100% Artesanal</div>
+<div data-hook="homepage_products" class="homepage_products">
+  <% cache(cache_key_for_products) do %>
+    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <% end %>
+</div>
