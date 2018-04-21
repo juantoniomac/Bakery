@@ -171,6 +171,7 @@ GEM
       friendly_id (>= 5.2.0, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     highline (1.6.21)
     htmlentities (4.3.4)
     i18n (0.9.5)
@@ -445,6 +446,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   globalize!
+  gmaps4rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18.4)
